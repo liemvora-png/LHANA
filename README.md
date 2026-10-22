@@ -6,4 +6,4 @@ A responsive, standalone redesign for LHANA, a family-owned interior design stud
 
 Open `index.html` in a browser, or serve the repository with any static file server.
 
-The portfolio photographs are served from LHANA's existing Squarespace image library. Project links currently point to the corresponding pages on the existing site.
+The all-projects gallery is at `projects/index.html`. Each project opens a detail page with its own photo gallery. Portfolio photographs are served from LHANA's existing Squarespace image library.
