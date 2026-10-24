@@ -237,3 +237,28 @@ window.lhanaProjects = [
     ]),
   },
 ];
+
+window.lhanaDefaultProjects = window.lhanaProjects;
+window.lhanaContentReady = fetch("/api/content", {
+  headers: { Accept: "application/json" },
+}).then(async (response) => {
+  const result = await response.json();
+  if (!response.ok) throw new Error(result.error || "Site content could not be loaded.");
+  if (!Array.isArray(result.projects)) throw new Error("The server returned an incomplete project list.");
+  window.lhanaSiteContent = result.site;
+  window.lhanaProjects = result.projects.map((project) => ({
+    ...project,
+    images: project.images.map((image) => ({
+      ...image,
+      src: image.url,
+      alt: image.altText,
+    })),
+  }));
+}).catch((error) => {
+  console.error("Failed to refresh public LHANA projects:", error);
+  const notice = document.querySelector("#content-update-notice");
+  if (notice) {
+    notice.textContent = "Live content is temporarily unavailable. Showing the latest portfolio copy saved with this page.";
+    notice.hidden = false;
+  }
+});

@@ -248,6 +248,23 @@ h2 {
   padding: 6.5rem 0 8rem;
 }
 
+.content-update-notice {
+  width: min(1280px, 84%);
+  margin: 0 auto;
+  padding: 1rem 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.project-selection-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 2rem 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .section-heading {
   display: flex;
   align-items: center;
@@ -297,6 +314,18 @@ h2 {
   position: relative;
   overflow: hidden;
   background: var(--paper-deep);
+}
+
+.project-image-empty {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 1rem;
+  background: var(--paper-deep);
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-align: center;
 }
 
 .project-card-tall .project-image-wrap {
