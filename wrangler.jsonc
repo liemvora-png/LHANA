@@ -32,6 +32,6 @@
   ],
   "vars": {
     "ACCESS_TEAM_DOMAIN": "old-shadow-43e8.cloudflareaccess.com",
-    "ACCESS_AUD": "REPLACE_WITH_LHANA_ACCESS_AUDIENCE"
+    "ACCESS_AUD": "1f007d46816d3920dada60537c8be29d6cc6f8db1cc74867cea7d47cbb58d2f8"
   }
 }
