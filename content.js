@@ -36,7 +36,13 @@ function updateHome(site, projects) {
   document.querySelector("#hero-link").firstChild.textContent = `${site.heroLink} `;
   document.querySelector("#work-title").textContent = site.workTitle;
   document.querySelector("#about-title").textContent = site.aboutTitle;
-  document.querySelector("#about-body").textContent = site.aboutBody;
+    const aboutBody = document.querySelector("#about-body");
+    aboutBody.innerHTML = site.aboutBody
+      .split(/\r?\n+/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean)
+      .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+      .join("");
   document.querySelector("#contact-title").textContent = site.contactTitle;
 
   const email = document.querySelector("#contact-email");

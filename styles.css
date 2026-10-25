@@ -415,12 +415,16 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-.about-copy > p {
+.about-copy #about-body p {
   max-width: 430px;
-  margin-bottom: 0;
+  margin-bottom: 1.1rem;
   color: rgba(244, 241, 233, 0.78);
   font-size: 0.86rem;
   line-height: 1.85;
+}
+
+.about-copy #about-body p:last-child {
+  margin-bottom: 0;
 }
 
 .contact-section {
