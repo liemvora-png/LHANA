@@ -7,8 +7,8 @@
   "preview_urls": false,
   "routes": [
     {
-      "pattern": "lhana.liemvora.cc/*",
-      "zone_name": "liemvora.cc"
+        "pattern": "lhana.liemvora.cc",
+        "custom_domain": true
     }
   ],
   "assets": {
@@ -19,10 +19,11 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "lhana-content",
-      "database_id": "00000000-0000-4000-8000-000000000000"
-    }
-  ],
+        "database_name": "lhana-site",
+        "database_id": "75d3eccf-6c8c-420c-b2c0-fdde2e308068",
+        "migrations_dir": "migrations"
+      }
+    ],
   "r2_buckets": [
     {
       "binding": "GALLERY",
