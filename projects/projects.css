@@ -68,6 +68,11 @@
   background: var(--paper-deep);
 }
 
+.project-list-image .project-image-empty {
+  position: absolute;
+  inset: 0;
+}
+
 .project-list-image img {
   width: 100%;
   height: 100%;

@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lhana",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-23",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+        "pattern": "lhana.liemvora.cc",
+        "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "./.worker-assets",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+        "database_name": "lhana-site",
+        "database_id": "75d3eccf-6c8c-420c-b2c0-fdde2e308068",
+        "migrations_dir": "migrations"
+      }
+    ],
+  "r2_buckets": [
+    {
+      "binding": "GALLERY",
+      "bucket_name": "lhana-gallery"
+    }
+  ],
+  "vars": {
+    "ACCESS_TEAM_DOMAIN": "old-shadow-43e8.cloudflareaccess.com",
+    "ACCESS_AUD": "REPLACE_WITH_LHANA_ACCESS_AUDIENCE"
+  }
+}

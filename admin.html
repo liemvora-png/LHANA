@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f1e9">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Private LHANA site editor.">
+    <title>Site editor — LHANA</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/admin.css">
+    <script src="/admin.js" defer></script>
+  </head>
+  <body class="admin-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="admin-header">
+      <a class="wordmark" href="/" aria-label="LHANA home">
+        <span class="wordmark-name">LHANA</span>
+      </a>
+      <span class="admin-header-label">Site editor</span>
+      <a class="admin-public-link" href="/" target="_blank" rel="noreferrer"><span class="admin-public-link-label">View public site</span><span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main" class="admin-main">
+      <section class="admin-intro" aria-labelledby="admin-title">
+        <div class="admin-intro-copy">
+          <h1 id="admin-title">Manage the site.</h1>
+          <p>Keep the studio details current, shape the project collection, and choose the photographs that tell each space's story.</p>
+        </div>
+        <p class="admin-private-label"><span aria-hidden="true"></span> Private editor</p>
+      </section>
+
+      <section class="admin-workspace" aria-labelledby="workspace-title">
+        <div class="admin-section-heading">
+          <div>
+            <h2 id="workspace-title">Site editor</h2>
+            <p id="editor-help">Choose a section. Saved changes appear on the public site.</p>
+          </div>
+        </div>
+
+        <div id="editor-tabs" class="admin-tabs" role="tablist" aria-label="Site content sections">
+          <button id="tab-copy" type="button" role="tab" aria-selected="true" aria-controls="editor-panel" tabindex="0" data-tab="copy">Site copy</button>
+          <button id="tab-projects" type="button" role="tab" aria-selected="false" aria-controls="editor-panel" tabindex="-1" data-tab="projects">Projects</button>
+          <button id="tab-gallery" type="button" role="tab" aria-selected="false" aria-controls="editor-panel" tabindex="-1" data-tab="gallery">Photography</button>
+        </div>
+        <p id="editor-status" class="admin-status" role="status" aria-live="polite">Loading your site content…</p>
+        <div id="editor-panel" class="admin-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-copy" aria-describedby="editor-help editor-status"></div>
+      </section>
+    </main>
+
+    <footer class="admin-footer">
+      <a class="wordmark wordmark-footer" href="/" aria-label="LHANA home"><span class="wordmark-name">LHANA</span></a>
+      <span>PRIVATE EDITOR <span aria-hidden="true">·</span> <span id="current-year"></span></span>
+    </footer>
+  </body>
+</html>
