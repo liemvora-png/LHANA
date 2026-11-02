@@ -238,6 +238,8 @@ h2 {
 
 .hero-actions a span {
   font-size: 1rem;
+  line-height: 1;
+  display: inline-block;
 }
 
 .hero-actions {
