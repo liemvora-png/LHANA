@@ -239,6 +239,17 @@ h2 {
   font-size: 1rem;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero-actions .hero-view-all {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
 .section-shell {
   width: min(1280px, 84%);
   margin: 0 auto;
